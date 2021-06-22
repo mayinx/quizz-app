@@ -52,6 +52,8 @@ header {
   padding: 10px;
   background-color: var(--header-bg-color);
   min-height: 50px;
+  border-bottom: 10px solid var(--header-nav-item-hover-border-color);
+  border-bottom: 10px solid var(--header-nav-item-hover-bg-color);
 }
 
 header h1 {
