@@ -1,0 +1,31 @@
+@media all and (min-width: 600px) {
+  main section.card {
+    width: 80vw;
+  }
+  main section.card {
+    margin: 2rem;
+    padding: 2.5rem;
+  }
+  footer nav ul li a i {
+    margin-right: 0.5rem;
+  }
+  footer nav ul li a span {
+    display: inline-block;
+  }
+}
+
+@media all and (min-width: 700px) {
+  header {
+    justify-content: space-between;
+  }
+
+  header .user-score {
+    display: block;
+  }
+}
+
+@media all and (min-width: 900px) {
+  header .game-area {
+    display: block;
+  }
+}

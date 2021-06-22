@@ -1,2 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=News+Cycle);
 @import "_base.css";
+@import "_layout.css";
+@import "_header.css";
+@import "_main.css";
+@import "_footer.css";
+@import "_media-queries.css";
