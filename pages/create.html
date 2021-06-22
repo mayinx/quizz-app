@@ -10,7 +10,7 @@
     <title>Quiz App</title>
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
-  <body>
+  <body class="create">
     <div id="container">
       <header>
         <h1 class="app-name">
@@ -25,70 +25,40 @@
       </header>
 
       <main>
-        <section class="question card">
-          <h2>Question 1</h2>
-          <h3>With a fancy subhead...</h3>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
-        </section>
-        <section class="question card">
-          <h2>Question 2</h2>
-          <h3>With another fancy Section Subhead...</h3>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
-        </section>
-        <section class="question card">
-          <h2>Question 2</h2>
-          <h3>With another fancy Section Subhead...</h3>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
-        </section>
-        <section class="question card">
-          <h2>Question 2</h2>
-          <h3>With another fancy Section Subhead...</h3>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
-        </section>
-        <section class="question card">
-          <h2>Question 2</h2>
-          <h3>With another fancy Section Subhead...</h3>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+        <section class="card">
+          <h2>Create a new Question</h2>
+          <form method="post">
+            <div class="form-control-wrapper">
+              <textarea
+                class="form-control"
+                name="question"
+                placeholder="Type in your Question here - f.i.: What is the answer to everything?"
+                rows="14"
+              ></textarea>
+            </div>
+            <div class="form-control-wrapper">
+              <textarea
+                class="form-control"
+                name="answer"
+                placeholder="Type in the answer to that question here - f.i.: 42!"
+                rows="14"
+              ></textarea>
+            </div>
+            <div class="form-control-wrapper">
+              <input
+                type="text"
+                class="form-control"
+                name="tags"
+                placeholder="Related tags - f.i.: Douglas Adams, THE Answer, Hitchikers Guide"
+              />
+            </div>
+
+            <div class="mb-3">
+              <button class="btn btn-primary" type="submit">
+                Create Question!
+              </button>
+            </div>
+          </form>
         </section>
       </main>
       <footer>

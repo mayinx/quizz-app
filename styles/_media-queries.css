@@ -12,9 +12,18 @@
   footer nav ul li a span {
     display: inline-block;
   }
+
+  body.profile .about-me {
+    width: 80%;
+    font-size: 1.3rem;
+  }
+
+  body.profile .tag-list {
+    width: 50%;
+  }
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
   header {
     justify-content: space-between;
   }
