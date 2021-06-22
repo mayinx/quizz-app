@@ -7,5 +7,188 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-size: 16px;
+  font-family: "News Cycle";
+  /* to prvgent scrolling of the body - we just want scrolling in the main container  */
+  height: 100%;
+  overflow: hidden;
+  color: var(--header-font-color);
+}
+
+:root {
+  --header-bg-color: #56c6c6;
+  --header-height-mobile: 75px;
+  --header-bg-color: #56c6c6;
+  --header-font-color: hsla(200, 0%, 0%, 0.7);
+  --header-nav-item-hover-bg-color: #79d2d2;
+  --header-nav-item-hover-border-color: #14b8b8;
+  --header-nav-item-hover-font-color: #fff;
+  --nav-overlay-bg-color: rgba(0, 0, 0, 0.3);
+}
+
+p {
+  padding: 1em;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  /*default for mobile first */
+  flex-wrap: wrap;
+  /* flex item can wrap inside the same container across multiple lines (down)*/
+  padding: 10px;
+  background-color: var(--header-bg-color);
+  min-height: 50px;
+}
+
+header h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+header h1 i {
+  margin-right: 1rem;
+}
+
+main {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: #e5eaf5;
+  background: #f5f1e3;
+  padding: 1rem;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  /*width: 90vw;*/
+}
+
+main section.card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+footer {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: var(--header-bg-color);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* align-items: center;*/
+  align-items: stretch;
+  text-align: center;
+  justify-content: center;
+  /*height: 100px;*/
+  min-height: 5rem;
+  /*  padding: 1rem;*/
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 0.5rem;
+}
+
+footer nav {
+  display: flex;
+  flex: auto;
+}
+
+footer nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+}
+
+footer nav ul li {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+footer nav ul li i {
+  margin-right: 5px;
+}
+
+footer nav ul li a {
+  padding: 0.5rem;
+  flex: auto;
+  justify-content: center;
+  text-decoration: none;
+  color: hsla(200, 0%, 0%, 0.7);
+  align-items: center;
+  /*justify-content: flex-start;*/
+  justify-content: center;
+  color: var(--header-font-color);
+}
+
+footer nav ul li i {
+  margin-right: 15px;
+}
+
+footer nav ul li.active,
+footer nav ul li:hover {
+  background-color: var(--header-nav-item-hover-bg-color);
+  color: var(--header-nav-item-hover-font-color);
+  border-radius: 10px;
+  border: 1px solid var(--header-nav-item-hover-border-color);
+}
+
+footer nav ul li.active a,
+footer nav ul li:hover a {
+  color: var(--header-nav-item-hover-font-color);
+}
+
+footer nav ul li a span {
+  display: none;
+}
+
+footer nav ul li a i {
+  margin: 0;
+}
+
+@media all and (min-width: 600px) {
+  main section.card {
+    width: 80vw;
+  }
+  main section.card {
+    margin: 2rem;
+    padding: 2.5rem;
+  }
+  footer nav ul li a i {
+    margin-right: 0.5rem;
+  }
+  footer nav ul li a span {
+    display: inline-block;
+  }
 }
