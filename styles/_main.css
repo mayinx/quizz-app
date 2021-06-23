@@ -71,3 +71,11 @@ body.profile .tag-list {
   width: 100%;
   text-align: center;
 }
+
+body.profile .outtahere {
+  border-top: 1px solid #b5b3b3;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+}
