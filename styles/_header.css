@@ -1,0 +1,53 @@
+header a {
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.75rem;
+  color: var(--header-font-color);
+}
+
+header .app-name {
+  font-weight: 600;
+  color: var(--header-font-color);
+
+  display: flex;
+}
+header .app-name i {
+  font-size: 3rem;
+  /* flex: auto; */
+  align-self: flex-end;
+}
+
+header .game-area {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  letter-spacing: 10px;
+  font-variant-caps: small-caps;
+
+  display: none;
+}
+
+header .user-score {
+  display: none;
+}
+
+/* header:not(.index) {
+  align-items: center;
+  justify-content: space-between;
+} */
+
+header a i {
+  margin-right: 0.5rem;
+}
+
+header h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+header h1 i,
+header h2 i {
+  margin-right: 1rem;
+}

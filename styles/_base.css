@@ -7,5 +7,57 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-size: 16px;
+  font-family: "News Cycle";
+  /* to prvgent scrolling of the body - we just want scrolling in the main container  */
+  height: 100%;
+  overflow: hidden;
+  color: var(--header-font-color);
+}
+
+:root {
+  --header-bg-color: #56c6c6;
+  --header-height-mobile: 75px;
+  --header-bg-color: #56c6c6;
+  --header-font-color: hsla(200, 0%, 0%, 0.7);
+  --header-nav-item-hover-bg-color: #79d2d2;
+  --header-nav-item-hover-border-color: #14b8b8;
+  --header-nav-item-hover-font-color: #fff;
+}
+
+p {
+  padding: 1em;
+}
+
+main {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  background: #e5eaf5;
+  background: #f5f1e3;
+  padding: 1rem;
+}
+
+footer {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: var(--header-bg-color);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* align-items: center;*/
+  align-items: stretch;
+  text-align: center;
+  justify-content: center;
+  /*height: 100px;*/
+  min-height: 5rem;
+  /*  padding: 1rem;*/
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 0.5rem;
 }

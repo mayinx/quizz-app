@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0069c24e64.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body class="create">
+    <div id="container">
+      <header>
+        <h1 class="app-name">
+          <i class="fas fa-gamepad"></i><span>Quizz App</span>
+        </h1>
+        <h2 class="game-area">
+          <i class="fas fa-plus-circle"></i><span>Create Question</span>
+        </h2>
+        <a class="user-score" href="#"
+          ><i class="fas fa-medal"></i><span>Score: 15.248</span></a
+        >
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>Create a new Question</h2>
+          <form method="post">
+            <div class="form-control-wrapper">
+              <textarea
+                class="form-control"
+                name="question"
+                placeholder="Type in your Question here - f.i.: What is the answer to everything?"
+                rows="14"
+              ></textarea>
+            </div>
+            <div class="form-control-wrapper">
+              <textarea
+                class="form-control"
+                name="answer"
+                placeholder="Type in the answer to that question here - f.i.: 42!"
+                rows="14"
+              ></textarea>
+            </div>
+            <div class="form-control-wrapper">
+              <input
+                type="text"
+                class="form-control"
+                name="tags"
+                placeholder="Related tags - f.i.: Douglas Adams, THE Answer, Hitchikers Guide"
+              />
+            </div>
+
+            <div>
+              <button class="btn green rounded" type="submit">
+                Create Question!
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <a href="/index.html"
+                ><i class="fas fa-home"></i> <span>Home</span></a
+              >
+            </li>
+            <li>
+              <a href="bookmarks.html"
+                ><i class="fas fa-bookmark"></i> <span>Bookmarks</span></a
+              >
+            </li>
+            <li class="active">
+              <a href="create.html"
+                ><i class="fas fa-plus-circle"></i> <span>Create</span></a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fas fa-user-ninja"></i> <span>Profile</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

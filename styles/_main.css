@@ -1,0 +1,101 @@
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  /*width: 90vw;*/
+}
+
+main section.card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+main section.card.question {
+  position: relative;
+  /* margin-bottom: 2.5rem; */
+  margin-top: 2rem;
+  /* margin: 2rem; */
+  /* padding: 2.5rem; */
+}
+
+main section.card .bookmark-icon {
+  /* position: relative;
+  top: -30%;
+  right: -50%;
+  font-size: 2.5rem; */
+
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  font-size: 2.5rem;
+}
+
+/* TODO: */
+body.create main form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+
+body.create main form .form-control-wrapper {
+  width: 100%;
+  padding: 1rem;
+}
+
+body.create main form .form-control {
+  width: inherit;
+
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 5%);
+  outline: none;
+  color: inherit;
+  padding: 0.5rem;
+  height: 50px;
+  font-size: 1rem;
+}
+
+body.create main form textarea.form-control {
+  height: 150px;
+}
+
+body.profile main img.avatar {
+  display: block;
+
+  margin: 1rem;
+
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+
+  border-radius: 100%;
+  z-index: 30;
+  border: 5px solid #fff;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+body.profile .about-me {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+body.profile .tag-list {
+  width: 100%;
+  text-align: center;
+}
+
+body.profile .outtahere {
+  border-top: 1px solid #b5b3b3;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+}
