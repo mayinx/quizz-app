@@ -1,3 +1,6 @@
+@media all and (min-width: 400px) {
+}
+
 @media all and (min-width: 600px) {
   main section.card {
     width: 80vw;
@@ -6,6 +9,17 @@
     margin: 2rem;
     padding: 2.5rem;
   }
+  main section.card.question {
+    margin: 2rem;
+    padding: 2.5rem;
+  }
+
+  /* main section.card .bookmark-icon {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+  } */
+
   footer nav ul li a i {
     margin-right: 0.5rem;
   }
@@ -31,6 +45,13 @@
   header .user-score {
     display: block;
   }
+
+  /* main section.card .bookmark-icon {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    font-size: 2.5rem;
+  } */
 }
 
 @media all and (min-width: 900px) {
