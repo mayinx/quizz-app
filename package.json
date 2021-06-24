@@ -1,0 +1,22 @@
+{
+  "name": "quizz-app",
+  "version": "1.0.0",
+  "description": "## Project Structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayinx/quizz-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayinx/quizz-app/issues"
+  },
+  "homepage": "https://github.com/mayinx/quizz-app#readme",
+  "devDependencies": {
+    "htmlhint": "^0.15.1"
+  }
+}

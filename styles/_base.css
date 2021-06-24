@@ -28,36 +28,3 @@ html {
 p {
   padding: 1em;
 }
-
-main {
-  grid-column: 1;
-  grid-row: 2;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  overflow-y: scroll;
-  background: #e5eaf5;
-  background: #f5f1e3;
-  padding: 1rem;
-}
-
-footer {
-  grid-column: 1;
-  grid-row: 3;
-  background-color: var(--header-bg-color);
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  /* align-items: center;*/
-  align-items: stretch;
-  text-align: center;
-  justify-content: center;
-  /*height: 100px;*/
-  min-height: 5rem;
-  /*  padding: 1rem;*/
-  font-size: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  padding: 0.5rem;
-}
