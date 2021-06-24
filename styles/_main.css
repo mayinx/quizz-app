@@ -151,6 +151,21 @@ main section.card.question .answer-overlay .toggle-answer {
   font-family: monospace;
 }
 
+/* TODO: Give da robot a couple of hands or arms or legs or whatever! */
+/* main section.card.question .answer-overlay .toggle-answer:before {
+
+  position: ;
+  font-family: "Font Awesome 5 Free";
+
+  font-weight: 900;
+  top: 200px;
+  left: 0px;
+  font-weight: 900;
+  font-size: 5rem;
+  color: rgb(86 198 198);
+  content: "\f544";
+} */
+
 main section.card.question .answer-wrapper.toggled .answer-overlay {
   visibility: hidden;
   opacity: 0;
