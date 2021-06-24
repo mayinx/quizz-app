@@ -5,6 +5,8 @@ main section {
   padding: 2rem;
   margin-bottom: 1rem;
 
+  text-align: center;
+
   /*width: 90vw;*/
 }
 
@@ -16,15 +18,20 @@ main section.card {
   background-color: #ffffff;
 }
 
+/* Question related CSS - TODO: Move into component css */
+
 main section.card.question {
   position: relative;
   /* margin-bottom: 2.5rem; */
   margin-top: 2rem;
   /* margin: 2rem; */
   /* padding: 2.5rem; */
+  width: 85vw;
+  min-width: 300px;
+  min-height: 30rem;
 }
 
-main section.card .bookmark-icon {
+main section.card.question .bookmark-icon {
   /* position: relative;
   top: -30%;
   right: -50%;
@@ -34,6 +41,139 @@ main section.card .bookmark-icon {
   top: -15px;
   right: 15px;
   font-size: 2.5rem;
+}
+
+main section.card.question toggle-answer {
+  padding: 1rem 1.5rem;
+}
+
+main section.card.question .answer-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #cbcbcb;
+
+  font-family: monospace;
+}
+
+main section.card.question .answer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: all 0.5s ease-in-out;
+}
+
+main section.card.question .answer .toggle-answer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.5s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+main section.card.question .answer p span:first-child {
+  color: #0b7dda;
+  font-weight: 900;
+  font-family: monospace;
+}
+main section.card.question .answer p span:last-child::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f120";
+  color: #0b7dda;
+  margin-right: 0.5rem;
+}
+main section.card.question .answer .toggle-answer:hover {
+  border: 1px solid var(--header-nav-item-hover-border-color);
+  background-color: var(--header-nav-item-hover-bg-color);
+  color: #fff;
+}
+
+main section.card.question .answer-overlay {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #e7e7e7;
+  z-index: 9;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.5s ease-in-out;
+}
+
+main section.card.question .answer-overlay:before {
+  /* position: absolute; */
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  /* top: 30px;
+  left: 250px; */
+  font-weight: 900;
+  top: 0;
+  left: 0;
+  font-weight: 900;
+  font-size: 5rem;
+  color: rgb(86 198 198);
+  content: "\f544";
+}
+
+main section.card.question .answer-overlay .toggle-answer {
+  font-family: monospace;
+}
+
+/* TODO: Give da robot a couple of hands or arms or legs or whatever! */
+/* main section.card.question .answer-overlay .toggle-answer:before {
+
+  position: ;
+  font-family: "Font Awesome 5 Free";
+
+  font-weight: 900;
+  top: 200px;
+  left: 0px;
+  font-weight: 900;
+  font-size: 5rem;
+  color: rgb(86 198 198);
+  content: "\f544";
+} */
+
+main section.card.question .answer-wrapper.toggled .answer-overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+
+main section.card.question .answer-wrapper.toggled .answer {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* TODO: */
