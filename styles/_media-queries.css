@@ -58,4 +58,8 @@
   header .game-area {
     display: block;
   }
+
+  body.create main form {
+    width: 80%;
+  }
 }

@@ -23,6 +23,12 @@ html {
   --header-nav-item-hover-bg-color: #79d2d2;
   --header-nav-item-hover-border-color: #14b8b8;
   --header-nav-item-hover-font-color: #fff;
+
+  --form-inputs-bg-color: #f5f5f5;
+  --form-inputs-border-color: #eee;
+
+  --form-inputs-focus-bg-color: #f0f0f0;
+  --form-inputs-focus-border-color: #00bcd4;
 }
 
 p {
