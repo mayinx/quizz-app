@@ -7,7 +7,7 @@
       src="https://kit.fontawesome.com/0069c24e64.js"
       crossorigin="anonymous"
     ></script>
-    <title>Quiz App</title>
+    <title>Quiz App > Create Questions</title>
     <link rel="stylesheet" href="/styles/index.css" />
     <script defer src="/assets/scripts/base.js"></script>
   </head>
@@ -15,7 +15,7 @@
     <div id="container">
       <header>
         <h1 class="app-name">
-          <i class="fas fa-gamepad"></i><span>Quizz App</span>
+          <i class="fas fa-gamepad"></i><span>Quiz App</span>
         </h1>
         <h2 class="game-area">
           <i class="fas fa-plus-circle"></i><span>Create Question</span>
@@ -35,6 +35,7 @@
                 name="question"
                 placeholder="Type in your Question here - f.i.: What is the answer to everything?"
                 rows="14"
+                required
               ></textarea>
             </div>
             <div class="form-control-wrapper">
@@ -43,6 +44,7 @@
                 name="answer"
                 placeholder="Type in the answer to that question here - f.i.: 42!"
                 rows="14"
+                required
               ></textarea>
             </div>
             <div class="form-control-wrapper">
@@ -51,10 +53,11 @@
                 class="form-control"
                 name="tags"
                 placeholder="Related tags - f.i.: Douglas Adams, THE Answer, Hitchikers Guide"
+                required
               />
             </div>
 
-            <div>
+            <div class="form-control-wrapper">
               <button class="btn green rounded" type="submit">
                 Create Question!
               </button>
@@ -67,7 +70,7 @@
           <ul>
             <li>
               <a href="/index.html"
-                ><i class="fas fa-home"></i> <span>Home</span></a
+                ><i class="fas fa-rocket"></i> <span>Start</span></a
               >
             </li>
             <li>
