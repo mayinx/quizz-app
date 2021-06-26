@@ -113,11 +113,8 @@ main section.card.question .answer-overlay {
 }
 
 main section.card.question .answer-overlay:before {
-  /* position: absolute; */
   position: relative;
   font-family: "Font Awesome 5 Free";
-  /* top: 30px;
-  left: 250px; */
   font-weight: 900;
   top: 0;
   left: 0;

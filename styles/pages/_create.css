@@ -38,3 +38,19 @@ body.create main form input.form-control {
 body.create main form textarea.form-control {
   height: 10rem;
 }
+
+/* body.create main form .form-control {
+
+}
+
+body.create main form .form-control:after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 50px;
+  left: 50px;
+  font-weight: 900;
+  font-size: 5rem;
+  color: rgb(86 198 198);
+  content: "\f544";
+} */
