@@ -21,8 +21,7 @@ header {
   padding: 10px;
   background-color: var(--header-bg-color);
   min-height: 50px;
-  border-bottom: 10px solid var(--header-nav-item-hover-border-color);
-  border-bottom: 10px solid var(--header-nav-item-hover-bg-color);
+  border-bottom: 10px solid var(--header-border-bottom-color);
   letter-spacing: 2px;
 }
 
@@ -33,15 +32,17 @@ main {
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
-  background: #e5eaf5;
-  background: #f5f1e3;
+  /* background: #e5eaf5; */
+  background: var(--page-bg-color);
   padding: 1rem;
 }
 
 footer {
   grid-column: 1;
   grid-row: 3;
-  background-color: var(--header-bg-color);
+  /* background-color: var(--footer-bg-color); */
+  /* background-color: var(--header-bg-color); */
+  background-color: var(--footer-bg-color);
   color: #fff;
   display: flex;
   flex-direction: row;

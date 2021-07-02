@@ -1,10 +1,15 @@
 window.onload = function () {
   "use strict";
 
+  // Load theme from local storage or set to the default light theme
+  let theme = localStorage.getItem("data-theme");
+  console.log("Theme: " + theme);
+  document.documentElement.setAttribute("data-theme", theme ? theme : "light");
+
   // for easy scoping of our js if necessary
   const pageId = document.body.id;
 
-  if (pageId === "start" || pageId === "bookmark") {
+  if (pageId === "start" || pageId === "bookmarks") {
     const toggleAnswerBtns = document.querySelectorAll(".toggle-answer");
 
     toggleAnswerBtns.forEach((btn) =>
@@ -49,13 +54,34 @@ window.onload = function () {
   //   });
 
   if (pageId === "profile") {
-    document.querySelector(".dark-mode-btn").addEventListener("click", (e) => {
+    const enableDarkModeBtnCaption = "Enable Dark Mode!";
+    const disableDarkModeBtnCaption = "Disable Dark Mode!";
+
+    const initializeDarkModeToggleBtn = (btn, theme = "light") => {
+      console.log("-- initializeDarkModeToggleBtn");
+      console.log("-- " + theme);
+      btn.textContent =
+        theme && theme === "dark"
+          ? disableDarkModeBtnCaption
+          : enableDarkModeBtnCaption;
+      if (btn.textContent == disableDarkModeBtnCaption)
+        btn.classList.add("dark-mode-btn--toggled");
+    };
+
+    const darkModeToggleBtn = document.querySelector(".dark-mode-btn");
+    initializeDarkModeToggleBtn(darkModeToggleBtn, theme);
+
+    darkModeToggleBtn.addEventListener("click", (e) => {
       console.log("Toggle Dark Mode");
       if (e.target.classList.toggle("dark-mode-btn--toggled")) {
-        e.target.textContent = "Disable Dark Mode!";
+        theme = "dark";
+        e.target.textContent = disableDarkModeBtnCaption;
       } else {
-        e.target.textContent = "Enable Dark Mode!";
+        theme = "light";
+        e.target.textContent = enableDarkModeBtnCaption;
       }
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("data-theme", theme);
     });
   }
 };

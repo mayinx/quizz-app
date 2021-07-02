@@ -46,6 +46,8 @@ window.onload = function () {
   //   });
 
   if (pageId === "profile") {
-    document.querySelector(".toggle-dark-mode-btn");
+    document
+      .querySelector(".toggle-dark-mode-btn")
+      .addEventListener("click", (e) => {});
   }
 };
