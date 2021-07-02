@@ -8,7 +8,7 @@ main section.card.question {
   /* padding: 2.5rem; */
   width: 85vw;
   min-width: 300px;
-  min-height: 30rem;
+  /* min-height: 35rem; */
 }
 
 main section.card.question .bookmark-icon {
@@ -138,6 +138,8 @@ main section.card.question .answer-overlay {
   align-content: center;
   justify-content: center;
   align-items: center;
+
+  padding: 1rem;
 
   transition: all 0.5s ease-in-out;
 }

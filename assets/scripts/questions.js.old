@@ -3,27 +3,24 @@ window.onload = function () {
 
   // for easy scoping of our js if necessary
   const pageId = document.body.id;
+  const toggleAnswerBtns = document.querySelectorAll(".toggle-answer");
 
-  if (pageId === "start" || pageId === "bookmark") {
-    const toggleAnswerBtns = document.querySelectorAll(".toggle-answer");
+  toggleAnswerBtns.forEach((btn) =>
+    btn.addEventListener("click", (event) => {
+      console.log("CalickCalack");
+      /** @type {HTMLDivElement} */
+      let answerWrapper = event.target.closest(".answer-wrapper");
+      answerWrapper.classList.toggle("toggled");
+    })
+  );
 
-    toggleAnswerBtns.forEach((btn) =>
-      btn.addEventListener("click", (event) => {
-        console.log("CalickCalack");
-        /** @type {HTMLDivElement} */
-        let answerWrapper = event.target.closest(".answer-wrapper");
-        answerWrapper.classList.toggle("toggled");
-      })
-    );
-
-    const toggleBookmarkIcons = document.querySelectorAll(".bookmark-icon");
-    toggleBookmarkIcons.forEach((bmIcon) => {
-      bmIcon.addEventListener("click", (e) => {
-        let questionCard = e.target.closest(".question");
-        questionCard.classList.toggle("bookmarked");
-      });
+  const toggleBookmarkIcons = document.querySelectorAll(".bookmark-icon");
+  toggleBookmarkIcons.forEach((bmIcon) => {
+    bmIcon.addEventListener("click", (e) => {
+      let questionCard = e.target.closest(".question");
+      questionCard.classList.toggle("bookmarked");
     });
-  }
+  });
 
   if (pageId === "create") {
     document.forms.createQuestion.addEventListener("submit", (e) => {
@@ -49,13 +46,6 @@ window.onload = function () {
   //   });
 
   if (pageId === "profile") {
-    document.querySelector(".dark-mode-btn").addEventListener("click", (e) => {
-      console.log("Toggle Dark Mode");
-      if (e.target.classList.toggle("dark-mode-btn--toggled")) {
-        e.target.textContent = "Disable Dark Mode!";
-      } else {
-        e.target.textContent = "Enable Dark Mode!";
-      }
-    });
+    document.querySelector(".toggle-dark-mode-btn");
   }
 };
