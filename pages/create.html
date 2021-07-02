@@ -8,10 +8,10 @@
       crossorigin="anonymous"
     ></script>
     <title>Quiz App > Create Questions</title>
-    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
     <script defer src="/assets/scripts/base.js"></script>
   </head>
-  <body class="create">
+  <body id="create" class="create">
     <div id="container">
       <header>
         <h1 class="app-name">
@@ -28,7 +28,7 @@
       <main>
         <section class="card">
           <h2>Create a new Question</h2>
-          <form method="post">
+          <form id="createQuestion" method="post" action="#">
             <div class="form-control-wrapper">
               <textarea
                 class="form-control"

@@ -33,11 +33,11 @@ footer nav ul li a {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: hsla(200, 0%, 0%, 0.7);
+  color: var(--footer-nav-item-link-color);
   align-items: center;
   /*justify-content: flex-start;*/
   justify-content: center;
-  color: var(--header-font-color);
+  color: var(--footer-font-color);
   font-size: 1.5rem;
 }
 
@@ -48,15 +48,15 @@ footer nav ul li i {
 
 footer nav ul li.active,
 footer nav ul li:hover {
-  background-color: var(--header-nav-item-hover-bg-color);
-  color: var(--header-nav-item-hover-font-color);
+  background-color: var(--footer-nav-item-hover-bg-color);
+  color: var(--footer-nav-item-hover-font-color);
   border-radius: 10px;
-  border: 1px solid var(--header-nav-item-hover-border-color);
+  border: 1px solid var(--footer-nav-item-hover-border-color);
 }
 
 footer nav ul li.active a,
 footer nav ul li:hover a {
-  color: var(--header-nav-item-hover-font-color);
+  color: var(--footer-nav-item-hover-font-color);
 }
 
 footer nav ul li a span {
