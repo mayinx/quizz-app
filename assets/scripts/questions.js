@@ -6,13 +6,17 @@ window.onload = function () {
   toggleAnswerBtns.forEach((btn) =>
     btn.addEventListener("click", (event) => {
       console.log("CalickCalack");
-
       /** @type {HTMLDivElement} */
-      var answerWrapper = event.target.closest(".answer-wrapper");
-      // console.log(answerWrapper.classList.value);
+      let answerWrapper = event.target.closest(".answer-wrapper");
       answerWrapper.classList.toggle("toggled");
-
-      // console.log(event.target.getAttribute("data-el"));
     })
   );
+
+  const toggleBookmarkIcons = document.querySelectorAll(".bookmark-icon");
+  toggleBookmarkIcons.forEach((bmIcon) => {
+    bmIcon.addEventListener("click", (e) => {
+      let questionCard = e.target.closest(".question");
+      questionCard.classList.toggle("bookmarked");
+    });
+  });
 };
