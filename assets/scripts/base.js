@@ -58,8 +58,6 @@ window.onload = function () {
     const disableDarkModeBtnCaption = "Disable Dark Mode!";
 
     const initializeDarkModeToggleBtn = (btn, theme = "light") => {
-      console.log("-- initializeDarkModeToggleBtn");
-      console.log("-- " + theme);
       btn.textContent =
         theme && theme === "dark"
           ? disableDarkModeBtnCaption
@@ -72,7 +70,6 @@ window.onload = function () {
     initializeDarkModeToggleBtn(darkModeToggleBtn, theme);
 
     darkModeToggleBtn.addEventListener("click", (e) => {
-      console.log("Toggle Dark Mode");
       if (e.target.classList.toggle("dark-mode-btn--toggled")) {
         theme = "dark";
         e.target.textContent = disableDarkModeBtnCaption;
