@@ -1,5 +1,6 @@
 import { createQuestionCardComponent } from "/lib/card.js";
-import { getData, loadSeedData } from "/lib/db.js";
+import { getData, loadSeedData, bookmarkedQuestions } from "/lib/db.js";
+// import { bookmarkedQuestions } from "/assets/scripts/bookmarks.js";
 
 export const renderQuestions = (data) => {
   Array.isArray(data) && data.length
@@ -30,9 +31,6 @@ const renderQuestionCards = (data) => {
   console.log("renderQuestionCards");
   document.querySelector("main").innerHTML = "";
   data
-    // .filter((cardData) => {
-    //   return cardData.isBookmarked;
-    // })
     .map((cardData, index) => {
       return createQuestionCardComponent(cardData, index + 1);
     })
@@ -55,16 +53,29 @@ const indexBookmarksOnLoad = () => {
   toggleBookmarkIcons.forEach((bmIcon) => {
     bmIcon.addEventListener("click", (e) => {
       let questionCard = e.target.closest(".question");
-      questionCard.classList.toggle("bookmarked");
+      let toggled = questionCard.classList.toggle("bookmarked");
+
+      let updatedData = getData().map((question) => {
+        if (question.id === parseInt(questionCard.id, 10)) {
+          question["isBookmarked"] = toggled;
+        }
+        return question;
+      });
+
+      // TODO: Introduce an updateData-method or similar
+      localStorage.setItem("questions", JSON.stringify(updatedData));
+
+      // TODO: Differntiate between bookmarks-index-view + index-view
+      document.body.id === "bookmarks"
+        ? renderQuestions(bookmarkedQuestions())
+        : renderQuestions(getData());
+      indexBookmarksOnLoad(); // reload event listeners, ollum!
     });
   });
 
   const seedDataBtn = document.querySelector(".load-seed-data-btn");
   if (seedDataBtn) {
     seedDataBtn.addEventListener("click", (e) => {
-      // Array.isArray(data) && data.length
-      //   ? renderQuestionCards(data)
-      //   : renderNoDataNotification();
       const data = loadSeedData();
       Array.isArray(data) && data.length
         ? renderQuestionCards(data)
