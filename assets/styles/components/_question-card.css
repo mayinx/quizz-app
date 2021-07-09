@@ -172,21 +172,37 @@ main section.card.question .answer-overlay:after {
 
 main section.card.question .answer-overlay .toggle-answer {
   font-family: monospace;
+  position: relative;
 }
 
 /* TODO: Give da robot a couple of hands or arms or legs or whatever! */
-/* main section.card.question .answer-overlay .toggle-answer:before {
+main section.card.question .answer-overlay .toggle-answer:before {
   position: absolute;
   font-family: "Font Awesome 5 Free";
 
   font-weight: 900;
   top: 0;
-  left: 0px;
+  left: -67px;
   font-weight: 900;
-  font-size: 5rem;
-  color: rgb(86 198 198);
-  content: "\f0a5";
-} */
+  font-size: 4rem;
+  color: var(--primary-color);
+  /* content: "\f0a5"; */
+  content: "\f164";
+  transform: rotateY(180deg);
+}
+
+main section.card.question .answer-overlay .toggle-answer:after {
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+
+  font-weight: 900;
+  top: 0;
+  left: 187px;
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--primary-color);
+  content: "\f259";
+}
 
 main section.card.question .answer-wrapper.toggled .answer-overlay {
   visibility: hidden;

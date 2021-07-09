@@ -49,6 +49,16 @@
   letter-spacing: 1px;
 }
 
+.ta-left {
+  text-align: left;
+}
+.ta-right {
+  text-align: right;
+}
+.ta-center {
+  text-align: center;
+}
+
 /* utils for height */
 /* usd for sizing (small / big)  */
 .height-50 {
